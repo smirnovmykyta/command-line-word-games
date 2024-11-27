@@ -5,7 +5,7 @@ const rpc = ["rock", "paper", "scissors"];
 export function rockPaperScissors() {
     const ourChoice = rpc[Math.floor(Math.random() * 3)];
 
-    rl.question(`Добро пожаловать в игру, пожалуйста сделайте выбор написав камень, ножницы или бумага\n`,
+    rl.question(`Please make a choice by writing rock, paper or scissors(enter "exit" to end the session or "back" to return to the menu).\n`,
         (input) => {
             switch (input.toLowerCase()) {
                 case 'rock':
@@ -17,7 +17,7 @@ export function rockPaperScissors() {
                 case 'scissors':
                     console.log(scissors(ourChoice));
                     return rockPaperScissors();
-                case 'cancel':
+                case 'back':
                     return startGameMenu();
                 case 'exit':
                     console.log("bey bey!")
@@ -28,7 +28,7 @@ export function rockPaperScissors() {
                     rockPaperScissors();
             }
         });
-};
+}
 
 function rock(ourChoice) {
     switch (ourChoice) {
