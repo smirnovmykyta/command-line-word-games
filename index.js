@@ -1,5 +1,6 @@
 import {rockPaperScissors} from "./src/games/rockPaperScissors.js";
 import * as readline from "readline";
+import {pigLatinTranslator} from "./src/games/pigLatinTranslator.js";
 
 
 export const rl = readline.createInterface({
@@ -8,7 +9,7 @@ export const rl = readline.createInterface({
 });
 
 export function startGameMenu() {
-    rl.question(`Что бы вбрать игры введите ее новер указанный в списке (или "exit" для выхода): 
+    rl.question(`To select a game, enter its number indicated in the list (or "exit" to exit): 
     1) Rock Paper Scissors
     2) Pig Latin Translator
     3) Caesar Cipher\n`, (input) => {
@@ -17,8 +18,7 @@ export function startGameMenu() {
                 rockPaperScissors();
                 break;
             case '2':
-                // pigLatinTranslator();
-                console.log('Translator')
+                pigLatinTranslator();
                 break;
             case '3':
                 // caesarCipher();
