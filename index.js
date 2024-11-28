@@ -1,6 +1,7 @@
 import {rockPaperScissors} from "./src/games/rockPaperScissors.js";
 import * as readline from "readline";
 import {pigLatinTranslator} from "./src/games/pigLatinTranslator.js";
+import {caesarCipher} from "./src/games/caesarCipher.js";
 
 
 export const rl = readline.createInterface({
@@ -21,8 +22,7 @@ export function startGameMenu() {
                 pigLatinTranslator();
                 break;
             case '3':
-                // caesarCipher();
-                console.log('Cipher')
+                caesarCipher();
                 break;
             case 'exit':
                 console.log("bey bey!")
