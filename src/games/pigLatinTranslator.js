@@ -22,6 +22,7 @@ export function pigLatinTranslator() {
 }
 
 function translateString(input) {
+    // (\w+) = word (\W+) = nonWord
     return input.replace(/(\w+)|(\W+)/g, (match, word, nonWord) => {
         if (word) {
             return modifyWord(word);
